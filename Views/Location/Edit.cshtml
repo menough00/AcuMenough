@@ -1,0 +1,20 @@
+﻿@model Location
+
+<h2>Edit Location</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <label>Location Name:</label>
+        @Html.TextBoxFor(m => m.LocationName, new { @readonly = "readonly" })
+    </div>
+    <div>
+        <label>Location ID:</label>
+        @Html.TextBoxFor(m => m.LocationId)
+    </div>
+    <div>
+        <label>Is Clearance:</label>
+        @Html.TextBoxFor(m => m.IsClearance)
+    </div>
+    <button type="submit">Save</button>
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcuMenough", "AcuMenough.csproj", "{FADEB113-6262-423B-8D93-31BE414A5ED2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FADEB113-6262-423B-8D93-31BE414A5ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADEB113-6262-423B-8D93-31BE414A5ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FADEB113-6262-423B-8D93-31BE414A5ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FADEB113-6262-423B-8D93-31BE414A5ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC46BF3B-C561-4034-80FE-15857C6E98F4}
+	EndGlobalSection
+EndGlobal
