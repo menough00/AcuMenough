@@ -8,7 +8,8 @@ namespace AcuMenough.Controllers
 {
     public class LocationController : Controller
     {
-        private const string ExcelFilePath = @"C:\Users\nickm\source\repos\AcuMenough\wwwroot\data\floor.xlsx";
+        private const string ExcelFilePath = @"floor.xlsx";
+
 
         public ActionResult Index()
         {
@@ -46,6 +47,7 @@ namespace AcuMenough.Controllers
             Location location = ReadLocationsFromExcel().FirstOrDefault(l => l.LocationName == locationName);
             return View(location);
         }
+        
 
         [HttpPost]
         public ActionResult DeleteConfirmed(string locationName)
@@ -57,10 +59,10 @@ namespace AcuMenough.Controllers
         private List<Location> ReadLocationsFromExcel()
         {
             List<Location> locations = new List<Location>();
-
+            //var fileIfo= new FileInfo(ExcelFilePath);
             using (ExcelPackage package = new ExcelPackage(new FileInfo(ExcelFilePath)))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
                 int rowCount = worksheet.Dimension.Rows;
 
                 for (int row = 2; row <= rowCount; row++)
