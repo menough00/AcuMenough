@@ -1,12 +1,13 @@
 ﻿@model Location
 
+
 <h2>Edit Location</h2>
 
 @using (Html.BeginForm())
 {
     <div>
         <label>Location Name:</label>
-        @Html.TextBoxFor(m => m.LocationName, new { @readonly = "readonly" })
+        @Html.TextBoxFor(m => m.LocationName)
     </div>
     <div>
         <label>Location ID:</label>
@@ -18,3 +19,6 @@
     </div>
     <button type="submit">Save</button>
 }
+<a asp-area="" asp-controller="Location" asp-action="Create">Create Location</a>
+<a asp-area="" asp-controller="Location" asp-action="Delete">Delete Location</a>
+<a asp-area="" asp-controller="Location" asp-action="Index">View Location</a>

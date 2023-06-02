@@ -2,16 +2,21 @@
 
 <h2>Delete Location</h2>
 
+
 <div>
     <label>Location Name:</label>
-    <span>@Model.LocationName</span>
+    @Html.TextBoxFor(m => m.LocationName)
 </div>
 <div>
     <label>Location ID:</label>
-    <span>@Model.LocationId</span>
+    @Html.TextBoxFor(m => m.LocationId)
 </div>
 <div>
     <label>Is Clearance:</label>
-    <span>@Model.IsClearance</span>
+    @Html.TextBoxFor(m => m.IsClearance)
 </div>
-<button type="submit">Confirm Delete</button>
+<button type="submit">Delete Location</button>
+<br />
+<a asp-area="" asp-controller="Location" asp-action="Create">Create Location</a>
+<a asp-area="" asp-controller="Location" asp-action="Edit">Edit Location</a>
+<a asp-area="" asp-controller="Location" asp-action="Index">View Location</a>

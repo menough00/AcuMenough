@@ -47,7 +47,7 @@ namespace AcuMenough.Controllers
             Location location = ReadLocationsFromExcel().FirstOrDefault(l => l.LocationName == locationName);
             return View(location);
         }
-        
+
 
         [HttpPost]
         public ActionResult DeleteConfirmed(string locationName)
@@ -83,7 +83,7 @@ namespace AcuMenough.Controllers
         {
             using (ExcelPackage package = new ExcelPackage(new FileInfo(ExcelFilePath)))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
                 int rowCount = worksheet.Dimension.Rows;
 
                 worksheet.Cells[rowCount + 1, 1].Value = location.LocationName;
@@ -98,7 +98,7 @@ namespace AcuMenough.Controllers
         {
             using (ExcelPackage package = new ExcelPackage(new FileInfo(ExcelFilePath)))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
 
                 int rowCount = worksheet.Dimension.Rows;
                 for (int row = 2; row <= rowCount; row++)
@@ -119,7 +119,7 @@ namespace AcuMenough.Controllers
         {
             using (ExcelPackage package = new ExcelPackage(new FileInfo(ExcelFilePath)))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
 
                 int rowCount = worksheet.Dimension.Rows;
                 for (int row = 2; row <= rowCount; row++)
